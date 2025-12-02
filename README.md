@@ -1,2 +1,3 @@
 BIENVENUE SUR NOTRE PAGE DE JEU 
- OBJECTIF
+ OBJECTIF 
+ 1. presenter une nouvelles page du jeu
