@@ -1,0 +1,215 @@
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background: #0d0d0d;
+  color: #f5f5f5;
+}
+
+/* Navigation */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  z-index: 1000;
+}
+.nav-logo {
+  width: 40px;
+  margin-right: 10px;
+}
+.nav-title {
+  font-family: "Permanent Marker", cursive;
+  font-size: 1.5rem;
+  color: #ffcc00;
+}
+.nav-right a {
+  margin: 0 10px;
+  padding: 6px 12px;
+  color: #fff;
+  text-decoration: none;
+  border: 2px solid #ff6600;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+.nav-right a:hover {
+  background: #ff6600;
+  color: #000;
+  box-shadow: 0 0 10px #ffcc00;
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  background: url("hero-bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+}
+.hero h1 {
+  font-size: 3rem;
+  font-family: "Permanent Marker", cursive;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px #00ffcc;
+  }
+  50% {
+    text-shadow: 0 0 30px #00ffff;
+  }
+  100% {
+    text-shadow: 0 0 10px #00ffcc;
+  }
+}
+
+/* Boutons ninja */
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 12px 24px;
+  background: #ff6600;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.btn::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 0, 0.4), transparent 70%);
+  transform: scale(0);
+  transition: transform 0.5s ease;
+}
+.btn:hover::before {
+  transform: scale(1);
+}
+.btn:hover {
+  background: #ffcc00;
+  color: #000;
+  box-shadow: 0 0 20px #ffcc00;
+}
+
+/* Titres ninja */
+section h2,
+footer h2 {
+  font-family: "Permanent Marker", cursive;
+  font-size: 2.5rem;
+  color: #ffcc00;
+  text-shadow: 2px 2px 8px #000;
+  position: relative;
+  margin-bottom: 1rem;
+}
+section h2::after,
+footer h2::after {
+  content: "⚔️";
+  display: block;
+  margin: 0.5rem auto;
+  width: 60px;
+  border-bottom: 3px solid #ff6600;
+}
+
+/* Sections */
+section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+/* Timeline */
+.timeline {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.step {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  font-weight: bold;
+  position: relative;
+  transition: all 0.5s ease;
+}
+.step::after {
+  content: "卍";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  color: #ff6600;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.step.active {
+  background: rgba(255, 255, 0, 0.2);
+  box-shadow: 0 0 20px #ffcc00;
+  transform: scale(1.1);
+}
+.step.active::after {
+  opacity: 1;
+}
+
+/* Carousel */
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  scroll-snap-type: x mandatory;
+}
+.carousel img {
+  width: 300px;
+  border-radius: 10px;
+  scroll-snap-align: center;
+  transition: transform 0.3s;
+}
+.carousel img:hover {
+  transform: scale(1.05);
+}
+
+/* Features */
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.feature {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 1.2rem;
+}
+
+/* Fade-in */
+.fade-in {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #111;
+  color: #aaa;
+}
