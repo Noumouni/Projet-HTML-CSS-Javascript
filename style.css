@@ -48,8 +48,11 @@
   }
   .header nav{
     float: right;
-  
+    opacity: .5;
   }
+  .header nav:hover{
+    opacity: 1;
+    }
 
   .hero-header{
     display: flex;
