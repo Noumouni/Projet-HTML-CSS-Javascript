@@ -1,0 +1,175 @@
+:root {
+    --color-primary: #0D0D0D ;   /* Noir principal */
+    --color-secondary: #ff6b00; /* Gris */
+    --color-light: #FFFFFF;     /* Blanc  */
+    --color-card:#2C2626;
+  }
+  :root {
+    --background-body:"Montserrat", sans-serif;
+    --font-main: "Montserrat", sans-serif;
+    --font-size-h1: 2.5rem;
+    --font-size-h2: 3rem;
+    --font-size-h3: 1.5rem;
+    --font-size-body: 1rem;
+  }
+  *{
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    color:var(--color-light);
+    font-size: var(--font-size-body);
+    font-family: "Montserrat", sans-serif;
+   background-color: var(--color-primary);
+
+  }
+  #logo{
+    width:100px ;
+    height:100px;
+  }
+  .header{
+    background-color: var(--color-primary);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    /**padding: 31px 87px ;**EN haut et en bas; et sur les deux côté**/
+    
+  }
+  .fa-brands{
+    color:var(--color-secondary);
+    width: 20px;
+    height:20px ;
+    font-size: 30px;
+    margin: 10px;
+  }
+  .header nav{
+    float: right;
+  
+  }
+
+  .hero-header{
+    display: flex;
+    flex-direction: row;
+    gap: 300px;
+    height:1000px;
+   
+   
+  }
+  .hero-header-img{
+    width: 850px;
+    float: right;
+    justify-content: space-around;
+ 
+  }
+  .hero-header__description{
+    margin: 450px 50px;
+    margin-left: 300px;
+    margin-bottom: 200px;
+ 
+
+  }
+  .hero-header__description h1{
+    font-size: 80px;
+    font-weight: 900;
+    text-shadow: 1px 1px 2px white;
+    
+  }
+  .hero-header__description h2{
+    font-family: "Montserrat", sans-serif ;
+    color: var(--color-light);
+    font-size: 16px;
+    font-weight: 700;
+  }
+  
+  
+  button{
+    background-color: var(--color-secondary);
+    padding: 20px;
+    font-size: 20px;
+    width: 300px;
+    border-radius: 50px;
+    color:var(--color-light) ;
+    margin-top: 20px;
+  }
+  .article{
+    display: flex;
+    flex-direction: row;
+    gap:  500px;
+  }
+  .article img{
+ 
+    height: 500px;
+
+    object-fit: cover;
+  }
+  .article1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+   .article1 img{
+    height: 500px;
+   }
+   h2{
+    font-family: "permanent Marker", cursive;
+    color: var(--color-secondary);
+    font-size: var(--font-size-h2);
+  }
+  .fade-in {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease;
+    }
+    .timeline {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    
+    .step {
+      background: rgba(255,255,255,0.1);
+      padding: 1rem 2rem;
+      border-radius: 10px;
+      font-weight: bold;
+      position: relative;
+      transition: all 0.5s ease;
+    }
+    
+    .step::after {
+      content: "卍"; /* symbole ninja */
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1.5rem;
+      color: #ff6600;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+    
+    .step.active {
+      background: rgba(255,255,0,0.2);
+      box-shadow: 0 0 20px #ffcc00;
+      transform: scale(1.1);
+    }
+    
+    .step.active::after {
+      opacity: 1;
+    }
+    .Mecanique h2{
+      text-align: center;
+    }
+    .Progression h2{
+      text-align: center;
+    }
+
+  footer{
+    background: var(--color-light);
+    width: 100%;
+    height: 200px;
+  }
