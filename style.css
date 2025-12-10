@@ -79,13 +79,17 @@
     font-size: 80px;
     font-weight: 900;
     text-shadow: 1px 1px 2px white;
+    text-shadow: 0 0 20px var(--color-secondary);
+     animation: glow 2s infinite alternate;
     
   }
   .hero-header__description h2{
     font-family: "Montserrat", sans-serif ;
     color: var(--color-light);
-    font-size: 16px;
+    font-size: 1px;
     font-weight: 700;
+    margin: 14px 0 18px;
+    opacity: 0.9;
   }
   
   
