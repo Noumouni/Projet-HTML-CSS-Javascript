@@ -19,10 +19,10 @@
     <header class="header" >
       <img src="Assets/images/logo.PNG" alt="" id="logo"/>
       <nav >
-        <a href=""><i class="fa-brands fa-instagram"></i></a>
-        <a href=""><i class="fa-brands fa-youtube"></i></a>
-        <a href=""><i class="fa-brands fa-discord"></i></a>
-        <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#"><i class="fa-brands fa-discord"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
       </nav>
       </header>
 
@@ -31,7 +31,7 @@
         <div class="hero-header__description">
          <h1>RIO <br> ASCENSION</h1>
           <h2>CLIQUE, LIBÈRE TON CHAKRA, PASSE EN MODE RIKUDO</h2>
-            <button>Jouer</button>
+            <button class="play-btn">Jouer</button>
             <div class="hud">
               <div><strong>Rio:</strong> <span id="rio-count">0</span></div>
               <div><strong>CPS:</strong> <span id="cps-count">0</span></div>
@@ -45,14 +45,8 @@
         </div>
       </section>
 
-      <section class="game">
-        <article class="article1">
-        <div>
-          <img
-            src="Assets/images/a6007599-9d1f-4e93-8409-7aeb52973088.JPG"alt=""/>
-            <h2>Novice</h2>
-        </div>
-        <div>
+      <section class="about">
+       
           <h2>À propos du jeu</h2>
           <p>
             Rio Ascension est un idle clicker inspiré de l’univers ninja. <br />
@@ -60,49 +54,92 @@
             novice. Il clique pour générer du Rio puis achète des <br />
             paliers pour progresser et débloquer un gain passif (CPS).
           </p>
-        </div>
-      </article>
-
-      <article class="article2">
-        <div>
-          <img
-            src="Assets/images/2a12ad85-c22c-468b-ad80-2eef2c119909.JPG"alt=""/>
-            <h2>KAGE</h2>
-        </div>
-      </article>
-
-      <article class="article">
-        <div>
-          <img
- src="Assets/images/a6007599-9d1f-4e93-8409-7aeb52973088.JPG"alt=""/>
- <h2>RIKUDO</h2>
-        </div>
-      </article>
+      </section>
+      <section class="features fade-in">
+        <h2>Fonctionnalités</h2>
+        <ul class="features-grid">
+          <li class="feature-card">
+            <i class="fa-solid fa-bolt"></i>
+            <h3>Stockage du Chakra</h3>
+            <p>Accumule ton énergie et libère-la pour progresser plus vite.</p>
+          </li>
+          <li class="feature-card">
+            <i class="fa-solid fa-hand-pointer"></i>
+            <h3>Clique et Gagne</h3>
+            <p>Chaque clic te rapproche du rang supérieur.</p>
+          </li>
+          <li class="feature-card">
+            <i class="fa-solid fa-chart-line"></i>
+            <h3>Monte en Grade</h3>
+            <p>Débloque les rangs ninja et augmente ton CPS.</p>
+          </li>
+          <li class="feature-card">
+            <i class="fa-solid fa-save"></i>
+            <h3>Sauvegarde locale</h3>
+            <p>Ton avancée est enregistrée automatiquement sur ton appareil.</p>
+          </li>
+          <li class="feature-card">
+            <i class="fa-solid fa-crown"></i>
+            <h3>Objectif Kage</h3>
+            <p>Atteins le sommet et deviens le ninja ultime.</p>
+          </li>
+        </ul>
       </section>
 
-      <section class="Mecanique">
-        <h2>Liste des Mécaniques</h2>
+      <!-- Mechanics -->
+      <section class="mechanics fade-in">
+        <h2>Mécaniques</h2>
         <div class="cards">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
+          <div class="card">Cliquer pour gagner du Rio</div>
+          <div class="card">Débloquer des rangs pour CPS</div>
+          <div class="card">Gain passif automatique</div>
+          <div class="card">Objectif ultime : devenir Kage</div>
         </div>
       </section>
-      <section class="Progression" id="Progression">
+
+      <!-- Progression -->
+      <section class="Progression fade-in">
         <h2>Progression</h2>
         <div class="timeline">
-          <div class="step">Genin - 10.0OO</div>
-          <div class="step">chunin - 25.000</div>
-          <div class="step">Jonin - 50.000</div>
-          <div class="step">Sannin - 500.00O</div>
-          <div class="step">Kage - 5.000.000</div>
+          <div class="step" data-cost="10000">Genin — 10 000</div>
+          <div class="step" data-cost="25000">Chunin — 25 000</div>
+          <div class="step" data-cost="50000">Jonin — 50 000</div>
+          <div class="step" data-cost="500000">Sannin — 500 000</div>
+          <div class="step" data-cost="5000000">Kage — 5 000 000</div>
         </div>
-
       </section>
-      <section class="Fonctionnality"></section>
-      
+
+      <!-- Video -->
+      <section class="video fade-in">
+        <h2>Vidéo du jeu</h2>
+        <video controls width="720" poster="Assets/images/video-poster.jpg">
+          <source src="Assets/video/trailer.mp4" type="video/mp4" />
+          Votre navigateur ne supporte pas la vidéo HTML5.
+        </video>
+      </section>
+
+      <!-- Marketing -->
+      <section class="marketing fade-in">
+        <h2>Pourquoi Rio Ascension ?</h2>
+        <p>
+          🔥 Déjà <span id="player-count">1 245</span> ninjas en ascension !
+        </p>
+        <p>Rejoins la communauté et deviens toi aussi un Kage.</p>
+      </section>
+
+      <!-- Testimonials -->
+      <section class="testimonials fade-in">
+        <h2>Ce que disent les joueurs</h2>
+        <div class="cards">
+          <div class="card">
+            “Un idle clicker addictif, j’ai atteint Genin en 2 jours !”
+          </div>
+          <div class="card">“L’univers ninja est super immersif.”</div>
+          <div class="card">
+            “Enfin un idle game avec une vraie progression.”
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="download">
       <h2>Télécharger</h2>
@@ -112,7 +149,7 @@
         <a href="#">Twitter</a> • <a href="#">YouTube</a> •
         <a href="#">Discord</a>
       </div>
-
     </footer>
+
   </body>
 </html>
