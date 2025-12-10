@@ -118,6 +118,10 @@
     color: var(--color-secondary);
     font-size: var(--font-size-h2);
   }
+  .fade-in {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
      
 .about,
 .features,
