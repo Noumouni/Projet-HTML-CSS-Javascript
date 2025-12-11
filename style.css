@@ -1,444 +1,392 @@
 :root {
-    --color-primary: #0D0D0D ;   /* Noir principal */
-    --color-secondary: #ff6b00; /* Gris */
-    --color-light: #FFFFFF;     /* Blanc  */
-    --color-card:#2C2626;
-  }
-  :root {
-    --background-body:"Montserrat", sans-serif;
-    --font-main: "Montserrat", sans-serif;
-    --font-size-h1: 2.5rem;
-    --font-size-h2: 3rem;
-    --font-size-h3: 1.5rem;
-    --font-size-body: 1rem;
+  --color-primary: #0d0d0d;
+  --color-secondary: #ff6b00;
+  --color-light: #ffffff;
+  --color-card: #2c2626;
+  --color-soft: #1a1a1a;
 
-    --raduis: 12px;
-    --shadow: 0 0 15px rgba(255,106,0,0.4);
-  }
-  *{
+  --font-main: "Montserrat", sans-serif;
+  --font-size-h1: 2.5rem;
+  --font-size-h2: 3rem;
+  --font-size-h3: 1.5rem;
+  --font-size-body: 1rem;
 
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  body{
-    color:var(--color-light);
-    font-size: var(--font-size-body);
-    font-family: "Montserrat", sans-serif;
-   background-color: var(--color-primary);
-   line-height: 1.6;
+  --radius: 12px;
+  --shadow: 0 0 15px rgba(255, 106, 0, 0.4);
+}
 
-  }
-  #logo{
-    width:64px ;
-    height:64px;
-    
-  }
-  .header{
-    background-color:rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(10px);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    padding: 14px 28px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    backdrop-filter: blur(10px);
-    z-index: 1000;
-    /**padding: 31px 87px ;**EN haut et en bas; et sur les deux côté**/
-    
-  }
-
-  
-  .fa-brands{
-    color:var(--color-secondary);
-    width: 20px;
-    height:20px ;
-    font-size: 30px;
-    margin: 10px;
-  }
-.hero-header{
-    display: flex;
-    gap: 40px;
-    justify-content: space-around;
-    align-items: center;
-   padding: 140px 20px 80px;
-  }
-  .hero-header-img{
-      width: 720px;
-      max-width: 42vw;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-  }
-  .hero-header__description{
+* {
+  box-sizing: border-box;
   margin: 0;
- padding: 20px;
+  padding: 0;
+}
 
-  }
-  .hero-header__description h1{
-    font-size: 80px;
-    font-weight: 900;
-    text-shadow: 1px 1px 2px white;
-    text-shadow: 0 0 20px var(--color-secondary);
-     animation: glow 2s infinite alternate;
-    
-  }
-  .hero-header__description h2{
-    font-family: "Montserrat", sans-serif ;
-    color: var(--color-light);
-    font-size: 18px;
-    font-weight: 700;
-    margin: 14px 0 18px;
-    opacity: 0.9;
-  }
-  
+body {
+  color: var(--color-light);
+  font-size: var(--font-size-body);
+  font-family: var(--font-main);
+  background-color: var(--color-primary);
+  line-height: 1.6;
+}
 
-  .play-btn{
-    background-color: var(--color-secondary);
-    padding: 14px 24px;
-    font-size: 18px;
-    width: 280px;
-    border-radius: 48px;
-    color:var(--color-light) ;
-    margin-top: 12px;
-      cursor: pointer;
-      border: none;
-      position: relative;
-      overflow: hidden;
-      transition: transform 0.25s ease, filter 0.25s ease;
-  }
- .main{
+#logo {
+  width: 64px;
+  height: 64px;
+}
+
+.header {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 14px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.fa-brands {
+  color: var(--color-secondary);
+  font-size: 30px;
+  margin: 10px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.fa-brands:hover {
+  transform: scale(1.2) rotate(-5deg);
+  color: #ffcc00;
+}
+
+.hero-header {
+  display: flex;
+  gap: 40px;
+  justify-content: space-around;
+  align-items: center;
+  padding: 140px 20px 80px;
+}
+.hero-header-img {
+  width: 720px;
+  max-width: 42vw;
+  opacity: 0;
+  animation: dissolveIn 2s forwards;
+}
+
+.hero-header__description h1 {
+  font-size: 80px;
+  font-weight: 900;
+  background: linear-gradient(270deg, #ff6b00, #ffcc00, #ff6b00);
+  background-size: 600% 600%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientFlow 8s ease infinite;
+}
+.hero-header__description h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 14px 0 18px;
+  opacity: 0.9;
+}
+
+.play-btn {
+  background-color: var(--color-secondary);
+  padding: 14px 24px;
+  font-size: 18px;
+  width: 280px;
+  border-radius: 48px;
+  color: var(--color-light);
+  margin-top: 12px;
+  cursor: pointer;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+.play-btn::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border-radius: 50px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 106, 0, 0.4) 0%,
+    transparent 70%
+  );
+  animation: pulse 2s infinite;
+  z-index: -1;
+}
+.play-btn:active {
+  transform: scale(0.95);
+  filter: brightness(0.9);
+}
+
+.main {
   padding-top: 100px;
- }
-   h2{
-    font-family: "permanent Marker", cursive;
-    color: var(--color-secondary);
-    font-size: var(--font-size-h2);
-  }
-  .fade-in {
-    opacity: 1 !important;
-    transform: translateY(0) !important;
-  }
-     
+}
+h2 {
+  font-family: "Permanent Marker", cursive;
+  color: var(--color-secondary);
+  font-size: var(--font-size-h2);
+}
+
 .about,
 .features,
 .mechanics,
 .video,
 .marketing,
 .testimonials {
- margin: 60px auto;
- max-width: 900px;
- text-align: center;
- padding: 20px;
+  margin: 60px auto;
+  max-width: 900px;
+  text-align: center;
+  padding: 20px;
 }
 
+/* Grids fix to avoid vertical stacking */
 .features-grid {
- display: flex;
- flex-wrap: wrap;
- justify-content: center;
- gap: 20px;
- list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+}
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
+/* Footer */
+footer {
+  background: var(--color-card);
+  color: var(--color-light);
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 60px;
+}
+.socials {
+  margin-top: 15px;
+}
+.socials a {
+  color: var(--color-light);
+  text-decoration: none;
+  margin: 0 8px;
+  opacity: 0.8;
+  transition: opacity 0.25s ease, color 0.25s ease;
+}
+.socials a:hover {
+  opacity: 1;
+  color: var(--color-secondary);
+}
+.download-btn {
+  display: inline-block;
+  margin-top: 15px;
+  background: var(--color-secondary);
+  padding: 12px 25px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  color: var(--color-light);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.download-btn:hover {
+  background: #ffcc00;
+  transform: scale(1.08);
+}
+/* Dissolution des images */
+@keyframes dissolveIn {
+  0% {
+    opacity: 0;
+    filter: blur(20px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+/* Dégradé animé du titre */
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Features fade-up + scale */
 .feature-card {
- background: var(--color-card);
- padding: 20px;
- border-radius: var(--radius);
- width: 220px;
- transition: transform 0.3s ease, box-shadow 0.3s ease;
- opacity: 0;
- transform: translateY(30px);
- animation: fadeUp 0.8s forwards;
- text-align: center;
+  background: var(--color-card);
+  padding: 20px;
+  border-radius: var(--radius);
+  width: 220px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px) scale(0.95);
+  animation: fadeUpScale 0.8s forwards;
 }
 .feature-card i {
- font-size: 36px;
- color: var(--color-secondary);
- margin-bottom: 10px;
+  font-size: 36px;
+  color: var(--color-secondary);
+  margin-bottom: 10px;
 }
 .feature-card h3 {
- font-size: 18px;
- margin-top: 8px;
- color: var(--color-light);
+  font-size: 18px;
+  margin-top: 8px;
+  color: var(--color-light);
 }
 .feature-card p {
- font-size: 14px;
- opacity: 0.8;
- margin-top: 6px;
+  font-size: 14px;
+  opacity: 0.85;
+  margin-top: 6px;
 }
 .feature-card:hover {
- transform: translateY(-8px);
- box-shadow: var(--shadow);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: var(--shadow);
+}
+@keyframes fadeUpScale {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
-/* =========================
-  Mechanics staggered reveal
-  ========================= */
+/* Icônes pulsation chakra (y compris icons header) */
+.feature-card i,
+.cards .card i,
+.fa-brands {
+  animation: pulseIcon 2s infinite;
+}
+@keyframes pulseIcon {
+  0% {
+    transform: scale(1);
+    color: var(--color-secondary);
+  }
+  50% {
+    transform: scale(1.2);
+    color: #ffcc00;
+  }
+  100% {
+    transform: scale(1);
+    color: var(--color-secondary);
+  }
+}
+
+/* Mécaniques glow reveal */
 .cards .card {
- opacity: 0;
- transform: translateY(30px);
- animation: fadeUp 0.8s forwards;
+  background: var(--color-card);
+  padding: 20px;
+  border-radius: var(--radius);
+  width: 220px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUpGlow 0.8s forwards;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+.cards .card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow);
+}
+@keyframes fadeUpGlow {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    box-shadow: 0 0 15px rgba(255, 106, 0, 0.4);
+  }
 }
 
-/* staggered delays */
-.cards .card:nth-child(1) {
- animation-delay: 0.2s;
-}
-.cards .card:nth-child(2) {
- animation-delay: 0.4s;
-}
-.cards .card:nth-child(3) {
- animation-delay: 0.6s;
-}
-.cards .card:nth-child(4) {
- animation-delay: 0.8s;
-}
-
-/* Progressive reveal for features */
-.features-grid .feature-card:nth-child(1) {
- animation-delay: 0.2s;
-}
-.features-grid .feature-card:nth-child(2) {
- animation-delay: 0.4s;
-}
-.features-grid .feature-card:nth-child(3) {
- animation-delay: 0.6s;
-}
-.features-grid .feature-card:nth-child(4) {
- animation-delay: 0.8s;
-}
-.features-grid .feature-card:nth-child(5) {
- animation-delay: 1s;
-}
-
-/* =========================
-  Mechanics Cards
-  ========================= */
-.cards {
- display: flex;
- justify-content: center;
- gap: 20px;
- flex-wrap: wrap;
-}
-.card {
- background: var(--color-card);
- padding: 20px;
- border-radius: var(--radius);
- width: 200px;
- transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.card:hover {
- transform: translateY(-10px);
- box-shadow: var(--shadow);
-}
-/* =========================
-  Timeline Progression
-  ========================= */
+/* Timeline progression */
 .timeline {
- display: flex;
- justify-content: center;
- gap: 2rem;
- flex-wrap: wrap;
- margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: 50px auto;
 }
-
 .step {
- background: var(--color-soft);
- padding: 1rem 2rem;
- border-radius: var(--radius);
- font-weight: bold;
- position: relative;
- transition: all 0.5s ease;
- overflow: hidden;
- color: var(--color-light);
- border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--color-soft);
+  padding: 1rem 2rem;
+  border-radius: var(--radius);
+  font-weight: bold;
+  position: relative;
+  transition: all 0.5s ease;
+  overflow: hidden;
+  color: var(--color-light);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
-
-/* Fill animation layer (progress bar feeling) */
 .step::before {
- content: "";
- position: absolute;
- top: 0;
- left: 0;
- width: 0%;
- height: 100%;
- background: rgba(255, 106, 0, 0.25);
- transition: width 1s ease;
- z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: rgba(255, 106, 0, 0.25);
+  transition: width 1s ease;
+  z-index: -1;
 }
-
-/* Active state: glow + scaled */
 .step.active {
- background: rgba(255, 255, 0, 0.15);
- box-shadow: 0 0 20px #ffcc00;
- transform: scale(1.06);
+  background: rgba(255, 255, 0, 0.15);
+  box-shadow: 0 0 20px #ffcc00;
+  transform: scale(1.06);
 }
-
-/* When step becomes active, the fill covers the card */
 .step.active::before {
- width: 100%;
+  width: 100%;
 }
 
-/* =========================
-  Video Section
-  ========================= */
+/* Video section — sans cadre */
 .video video {
- border: 3px solid var(--color-secondary);
- border-radius: var(--radius);
- box-shadow: 0 0 20px #ffcc00;
- width: 100%;
- max-width: 900px;
+  border: none;
+  border-radius: var(--radius);
+  box-shadow: none;
+  width: 100%;
+  max-width: 900px;
+  opacity: 0;
+  animation: dissolveIn 2s forwards;
 }
 
-/* =========================
-  Footer
-  ========================= */
-footer {
- background: var(--color-card);
- color: var(--color-light);
- text-align: center;
- padding: 40px 20px;
-}
-
-.download-btn {
- display: inline-block;
- margin-top: 15px;
- background: var(--color-secondary);
- padding: 12px 25px;
- border-radius: var(--radius);
- text-decoration: none;
- color: var(--color-light);
- transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.download-btn:hover {
- background: #ffcc00;
- transform: scale(1.08);
-}
-
-.socials a {
- color: var(--color-light);
- text-decoration: none;
- margin: 0 8px;
- opacity: 0.8;
- transition: opacity 0.25s ease, color 0.25s ease;
-}
-
-.socials a:hover {
- opacity: 1;
- color: var(--color-secondary);
-}
-
-/* =========================
-  HUD (Rio & CPS counters)
-  ========================= */
-.hud {
- display: flex;
- gap: 16px;
- margin-top: 12px;
- font-size: 16px;
-}
-
-.hud div {
- background: rgba(255, 255, 255, 0.08);
- border: 1px solid rgba(255, 255, 255, 0.1);
- padding: 8px 12px;
- border-radius: 8px;
-}
-/* =========================
-  Marketing Section
-  ========================= */
-.marketing {
- margin: 60px auto;
- max-width: 900px;
- text-align: center;
- padding: 20px;
- font-size: 18px;
-}
-.marketing span {
- font-weight: bold;
- color: var(--color-secondary);
- font-size: 22px;
-}
-
-/* =========================
-  Testimonials Section
-  ========================= */
-.testimonials {
- margin: 60px auto;
- max-width: 900px;
- text-align: center;
- padding: 20px;
-}
-.testimonials .cards {
- display: flex;
- justify-content: center;
- gap: 20px;
- flex-wrap: wrap;
-}
-.testimonials .card {
- background: var(--color-card);
- padding: 20px;
- border-radius: var(--radius);
- width: 240px;
- font-style: italic;
- transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.testimonials .card:hover {
- transform: translateY(-8px);
- box-shadow: var(--shadow);
-}
-
-/* =========================
-  Fade-in on scroll (initial state)
-  ========================= */
+/* Fade-in initial state: controlled by JS */
 .fade-in {
- opacity: 0;
- transform: translateY(50px);
- transition: all 0.8s ease;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
 }
 
-/* =========================
-  Global Animations
-  ========================= */
-@keyframes glow {
- from {
-   text-shadow: 0 0 10px var(--color-secondary);
- }
- to {
-   text-shadow: 0 0 30px #ffcc00;
- }
-}
-
+/* Global pulse used by play button glow */
 @keyframes pulse {
- 0% {
-   transform: scale(1);
-   opacity: 1;
- }
- 100% {
-   transform: scale(1.5);
-   opacity: 0;
- }
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
 }
 
-@keyframes fadeUp {
- to {
-   opacity: 1;
-   transform: translateY(0);
- }
+/* Unlock glow animation class (used by JS) */
+.glow {
+  animation: glowUnlock 1.2s ease;
 }
-
-
-
-
-    
-   
-    
-    
-    
-    
-    
-   
+@keyframes glowUnlock {
+  0% {
+    box-shadow: 0 0 10px #ff6b00;
+  }
+  50% {
+    box-shadow: 0 0 30px #ffcc00;
+    transform: scale(1.08);
+  }
+  100% {
+    box-shadow: 0 0 10px #ff6b00;
+    transform: scale(1);
+  }
+}
